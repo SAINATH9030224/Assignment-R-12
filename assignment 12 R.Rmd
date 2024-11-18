@@ -1,0 +1,52 @@
+---
+title: '"DNA Sequence Analysis'
+author: '"Sainath"'
+date: "2024-11-18"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+
+Let’s define a DNA sequence for analysis.
+
+```{r}
+# DNA sequence
+dna_sequence <- "ATGCGTACGTAGCTAGCTAAGCTAGCTAG"
+
+# Displaying the sequence
+dna_sequence
+
+# frequency of each nucleotide (A, T, C, G)
+nucleotide_table <- table(strsplit(dna_sequence, NULL))
+
+# Converting the table to a data frame for visualization
+nucleotide_df <- as.data.frame(nucleotide_table)
+colnames(nucleotide_df) <- c("Nucleotide", "Frequency")
+
+# frequency table
+nucleotide_df
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
